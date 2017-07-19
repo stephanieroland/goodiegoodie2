@@ -207,37 +207,28 @@ window['_fs_namespace'] = 'FS';
         <div class="col-sm-8 padding-bottom">
           <div class="row">
             <div class="col-sm-6">
-              <input type="text" id="name" class="form-control" name="co_f_name" placeholder="First name" required>
+              <input type="text" id="name" class="form-control" name="co_f_name" placeholder="First & Last name" required>
           
             </div>
             <div class="col-sm-6">
-              <input type="text" id="lastname" class="form-control" name="co_l_name" placeholder="Last name" required>
+               <input type="email" id="buyemail"  class="form-control" name="co_email" placeholder="Email" required>
      
             </div>
           </div><!-- .row -->
                  <div class="row">
             <div class="col-sm-6">
              
-              <input type="email" id="buyemail"  class="form-control" name="co_email" placeholder="Email" required>
+     <input type="tel" id="phone" class="form-control" name="co_phone" placeholder="Phone" required>
             
             </div>
             <div class="col-sm-6">
           
-              <input type="tel" id="phone" class="form-control" name="co_phone" placeholder="Phone" required>
+              <input type="text" id="address1" class="form-control" name="co_address1" placeholder="Address" required>
            
             </div>
           </div><!-- .row -->
-                 <div class="row">
-            <div class="col-sm-6">
-            
-              <input type="text" id="address1" class="form-control" name="co_address1" placeholder="Address 1" required>
-            </div>
-            <div class="col-sm-6">
       
-              <input type="text"  id="address2" class="form-control" name="co_address2" placeholder="Address 2">
-            </div>
-          </div><!-- .row -->
-          <input type="text" id="company" class="form-control" name="co_company" placeholder="Company">
+          
           <div class="row">
             <div class="col-sm-6">
               <div class="form-element form-select">
@@ -447,6 +438,7 @@ window['_fs_namespace'] = 'FS';
             description: description,
             amount: price,
             image: image,
+            email : $('#buyemail').val()
         });
     };
     $(function() {
@@ -476,11 +468,10 @@ var trackOutboundLink = function(url) {
 		var email = $('#buyemail').val()
         var totalcost = $('#cart-subtotal-input').val()
         var name = $('#name').val()
-        var lastname = $('#lastname').val()
+       
         var phone = $('phone').val()
         var address1 = $('#address1').val()
-        var address2 = $('#address2').val()
-        var company = $('#company').val()
+  
         var country = $('#country').val()
         var state = $('#state').val()
         var zipcode = $('#zipcode').val()
@@ -496,12 +487,11 @@ var trackOutboundLink = function(url) {
 			var response = mixpanel.people.set({
 	    	"$email":email,
             "$totalcost":totalcost,
-                "$firstname":name,
-                "$lastname":lastname,
+                "$firstlastname":name,
+            
                 "$phone":phone,
                 "$address1":address1,
-                "$address2":address2,
-                "$company":company,
+             
                 "$country":country,
                 "$state":state,
                 "$zicode":zipcode,
