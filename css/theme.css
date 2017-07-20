@@ -5554,12 +5554,12 @@ input[type="button"].btn-block {
   font-size: 14px;
 }
 .citation {
-  margin-top:90px;
-padding:30px;
+  margin:5%;
+  padding:30px;
 }
 @media screen and (max-width: 768px) {
   .citation {
-    margin-top:0px;
+    margin-bottom:0px;
   }
 }
 @media screen and (max-width: 991px) {
