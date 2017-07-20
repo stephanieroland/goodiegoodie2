@@ -116,19 +116,19 @@ jQuery(document).ready(function($) {
 
 	// Toggle Mobile Menu
 	//------------------------------------------------------------------------------
-	/*var menuToggle = $('.mobile-menu-toggle'),
+	var menuToggle = $('.mobile-menu-toggle'),
 			mobileMenu = $('.main-navigation');
 	menuToggle.on('click', function() {
 		$(this).toggleClass('active');
 		mobileMenu.toggleClass('open');
 	});
-    */
+    /*
 	var menuToggle = $('.mobile-menu-toggle'),
 	    mobileMenu = $('.main-navigation');
 	menuToggle.on('click', function() {	
 		menuToggle.addClass('active');
 		mobileMenu.addClass('open');
-	});
+	}); */
     $(".main-navigation *").on('click', function() {
   		menuToggle.removeClass('active');
         mobileMenu.removeClass('open');	
