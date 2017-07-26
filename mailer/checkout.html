@@ -34,10 +34,7 @@
   <script src="js/vendor/page-preloading.js"></script>
 
   <!-- Modernizr -->
-    <script src="js/vendor/modernizr.custom.js"></script>
-        <!-- fortawesome --> 
-    
-    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+  <script src="js/vendor/modernizr.custom.js"></script>
     
        <!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
 0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
@@ -120,13 +117,13 @@ window['_fs_namespace'] = 'FS';
     <header class="navbar">
 
       <!-- Site Logo -->
-      <a href="indexv3.html" class="site-logo visible-desktop">
+      <a href="indexv2.html" class="site-logo visible-desktop">
         <!--<span>[</span> M
         <span class="text-gray">/</span>
         STORE <span>]</span> -->
           <span> <img src="img/goodie/logo-final-min.png"/></span>
       </a><!-- site-logo.visible-desktop -->
-      <a href="indexv3.html" class="site-logo visible-mobile">
+      <a href="indexv2.html" class="site-logo visible-mobile">
          <img src="img/goodie/logo-final.png"/>
       </a><!-- site-logo.visible-mobile -->
 
@@ -148,15 +145,15 @@ window['_fs_namespace'] = 'FS';
       <nav class="main-navigation text-center">
         <ul class="menu">
           <li>
-            <!--<a href="indexv3.html">Home</a>
+            <!--<a href="indexv2.html">Home</a>
            <!-- <ul class="sub-menu">
-              <li class="current-menu-item"><a href="indexv3.html">Home Version 1</a></li>
+              <li class="current-menu-item"><a href="indexv2.html">Home Version 1</a></li>
               <li><a href="home-v2.html">Home Version 2</a></li>
               <li><a href="home-v3.html">Home Version 3</a></li>
             </ul> -->
           </li>
           <li>
-           <a href="indexv3.html#lollipops">Our lollipops</a>
+           <a href="indexv2.html#lollipops">What's in the box?</a>
            <!-- <ul class="sub-menu">
               <li><a href="shop-fullwidth-sl.html">Full Width Sidebar Left</a></li>
               <li><a href="shop-fullwidth-sr.html">Full Width Sidebar Right</a></li>
@@ -181,7 +178,7 @@ window['_fs_namespace'] = 'FS';
               <li><a href="gallery-boxed-no-gap.html">Boxed No Gap</a></li>
             </ul>
           </li> -->
-            <li><a href="shop.html">Shop</a></li>
+            <li><a href="shopping-cartv3.html">Shop</a></li>
          <!-- <li><a href="#about">About</a></li> --> 
             <li><a href="faq.html">FAQ</a></li>
           <li><a href="contact.html">Contact us</a></li>
@@ -199,33 +196,32 @@ window['_fs_namespace'] = 'FS';
         </div><!-- .inner -->
       </div><!-- .toolbar -->
     </header><!-- .navbar.navbar-sticky -->
+
     <!-- Container -->
     <form method="post" class="container padding-top-1x padding-bottom-2x">
 
-        <h1 class="">Checkout</h1>
-      <div class="row ">
+      <h1 class="space-top-half">Checkout</h1>
+      <div class="row padding-top">
 
         <!-- Checkout Form -->
-        <div class="col-sm-8 col-md-8 padding-bottom">
-          
-             <h5 style="text-align:left">Shipping information</h5>
+        <div class="col-sm-8 padding-bottom">
           <div class="row">
-            <div class="col-sm-6 col-md-6">
+            <div class="col-sm-6">
               <input type="text" id="name" class="form-control" name="co_f_name" placeholder="First & Last name" required>
           
             </div>
-            <div class="col-sm-6 col-md-6">
+            <div class="col-sm-6">
                <input type="email" id="buyemail"  class="form-control" name="co_email" placeholder="Email" required>
      
             </div>
           </div><!-- .row -->
                  <div class="row">
-            <div class="col-sm-6 col-md-6">
+            <div class="col-sm-6">
              
      <input type="tel" id="phone" class="form-control" name="co_phone" placeholder="Phone" required>
             
             </div>
-            <div class="col-sm-6 col-md-6">
+            <div class="col-sm-6">
           
               <input type="text" id="address1" class="form-control" name="co_address1" placeholder="Address" required>
            
@@ -234,7 +230,7 @@ window['_fs_namespace'] = 'FS';
       
           
           <div class="row">
-            <div class="col-sm-6 col-md-6">
+            <div class="col-sm-6">
               <div class="form-element form-select">
                 <select id="country" class="form-control" name="co_country">
                   <option value="">Country</option>
@@ -244,17 +240,17 @@ window['_fs_namespace'] = 'FS';
               </div>
                
             </div>
-            <div class="col-sm-6 col-md-6">
+            <div class="col-sm-6">
              <input id="state" type="text" class="form-control" name="co_state" placeholder="State">
             
             </div>
           </div><!-- .row -->
                <div class="row">
-            <div class="col-sm-6 col-md-6">
+            <div class="col-sm-6">
         
                 <input id="city" type="text" class="form-control" name="co_city" placeholder="City">
             </div>
-            <div class="col-sm-6 col-md-6">
+            <div class="col-sm-6">
            
               <input id="zipcode" type="text" class="form-control" name="co_zip" placeholder="ZIP code" required>
             </div>
@@ -266,7 +262,7 @@ window['_fs_namespace'] = 'FS';
             <label class="radio radio-inline">
               <input type="radio" name="co_shipping"> Ship to different address
             </label>
-          </div><!-- .form-group 
+          </div><!-- .form-group --> 
             <button class="btn btn-sm btn-primary" id="changeaddress"> <span class="ui-button-text">Ship to different address</span></button>
       
             
@@ -305,11 +301,11 @@ window['_fs_namespace'] = 'FS';
             
               <input id="zipcode-shipping" type="text" class="form-control" name="co_zip" placeholder="ZIP code" required>
             </div>
-            </div> -->
+            </div>
         </div><!-- .col-sm-8 -->
 
         <!-- Sidebar -->
-        <div class="col-md-4  col-sm-4 padding-bottom">
+        <div class="col-md-3 col-md-offset-1 col-sm-4 padding-bottom">
           <aside>
             <h3>Cart total:</h3>
               <input type="hidden" id="unit-price" value="15">
@@ -323,8 +319,8 @@ window['_fs_namespace'] = 'FS';
                                     data-name="Goodie Goodie Box"
                                     data-description="Receive 12 natural lollipops."
                                     data-image="img/goodie/lolly-red.png"
-                                    data-price="29">Order</button>  
-            <a href="checkout2.html" class="btn btn-default btn-ghost icon-left btn-block">
+                                    data-price="29">Checkout</button>  
+            <a href="shopping-cartv3.html" class="btn btn-default btn-ghost icon-left btn-block">
               <i class="material-icons arrow_back"></i>
               Back To Cart
             </a>
@@ -462,7 +458,7 @@ window['_fs_namespace'] = 'FS';
     
   <script>
 var trackOutboundLink = function(url) {
-    ga('send', 'event', 'Order', 'Click', url, { 
+    ga('send', 'event', 'Checkout', 'Click', url, { 
        
     });
   
@@ -557,6 +553,13 @@ var trackOutboundLink = function(url) {
     	return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 	}
 </script>
+    <script>
+  window.intercomSettings = {
+    app_id: "t9u3hm5a"
+  };
+</script>
+
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/t9u3hm5a';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
 
     <script>
    // add them to the *validation section*.
@@ -566,17 +569,19 @@ var mixpanel_id = "8b48e4bda702d37941976a465c7694b6";
 
 $(function() {
     
-    if (localStorage.getItem("totalcost")!== null){
-        totalcost = localStorage.getItem("totalcost");
+    if (localStorage.getItem("quantity")!== null){
+        quantite = parseInt(localStorage.getItem("quantity"));
+        unitprice = parseInt($("#unit-price").val());
             var totalCostText = $('#cart-subtotal-text');
     var totalCostInput = $('#cart-subtotal-input');
-         totalCostText.text("$" + totalcost);
-		totalCostInput.val(totalcost);
-         $(".checkout-button").data("price", totalcost * 100);
+     var   totalCost= unitprice * quantite;
+        totalCostText.text("$" + totalCost);
+		totalCostInput.val(totalCost);
+        $(".checkout-button").data("price", totalCost * 100);
     }
     else{
          var totalCostText = $('#cart-subtotal-text');
-        totalCostText.text("$0");
+        totalCostText.text("$15");
     }
 	//mixpanel.track("page_load");
      $("#form-success").hide();

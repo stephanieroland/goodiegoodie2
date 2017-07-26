@@ -397,9 +397,7 @@ window['_fs_namespace'] = 'FS';
             <input type="hidden" id="cart-subtotal-input" name="total_cost" value="15">
             <p class="text-sm text-gray">* Note: This amount includes costs for shipping to the address you provide hereafter.</p>
            
-              <a
-                        href="checkout.html"
-                                    class="btn btn-primary btn-block waves-effect waves-light space-top-none checkout"
+              <a  href="checkout.html" class="btn btn-primary btn-block waves-effect waves-light space-top-none app-check"
                                     >Checkout</a>  
             <a href="shop.html" class="btn btn-default btn-ghost icon-left btn-block">
               <i class="material-icons arrow_back"></i>
@@ -497,13 +495,7 @@ window['_fs_namespace'] = 'FS';
     
   <script>
   
-    	$('.checkout').click(function(event) {
-		// prevent default browser behaviour
-
-        ga('send', 'event', 'Checkout', 'Click', 'Button', { 
-            
-
-        });     
+     
     
 
 
@@ -603,7 +595,13 @@ $(function() {
         totalCostText.text("$0");
     }
     
-    
+      	$('.app-check').click(function(event) {
+		// prevent default browser behaviour
+
+        ga('send', 'event', 'Checkout', 'Click', 'Button', { 
+        });
+
+        });  
     
 	//mixpanel.track("page_load");
      $("#form-success").hide();
