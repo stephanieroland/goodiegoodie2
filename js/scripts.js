@@ -227,21 +227,22 @@ jQuery(document).ready(function($) {
 	});
 
 
-	// Count Input (Quantity)
-    var totalCostText = $('#cart-subtotal-text');
+	// ount Input (Quantity)
+/*var totalCostText = $('#cart-subtotal-text');
     var totalCostInput = $('#cart-subtotal-input');
     var updateCart = function(totalCost) {
         totalCostText.text("$" + totalCost);
 		totalCostInput.val(totalCost);
         $(".checkout-button").data("price", totalCost * 100);
-    };
-    var price = parseFloat($('#the-shopping-cart .item-price').text().substr(1));
+    }; */
+    
+    /*var price = parseFloat($('#the-shopping-cart .item-price').text().substr(1));
     updateCart(price);
 	//------------------------------------------------------------------------------
 	$(".incr-btn").on("click", function(e) {
 		var $button = $(this);
 		var oldValue = $button.parent().find('.quantity').val();
-        console.log("click");
+        //console.log("click");
         console.log(price);
         $button.parent().find('.incr-btn[data-action="decrease"]').removeClass('inactive');
 		if ($button.data('action') == "increase") {
@@ -262,6 +263,83 @@ jQuery(document).ready(function($) {
         var totalCost = parseInt(newVal) * price;
         console.log(totalCost);
         updateCart(totalCost);
+		e.preventDefault();
+
+     
+        var $button = $(this);
+		var oldValue = $button.parent().find('.quantity').val();
+		$button.parent().find('.incr-btn[data-action="decrease"]').removeClass('inactive');
+		if ($button.data('action') == "increase") {
+			var newVal = parseFloat(oldValue) + 1;
+		} else {
+		 // Don't allow decrementing below 1
+			if (oldValue > 1) {
+				var newVal = parseFloat(oldValue) - 1;
+			} else {
+				newVal = 1;
+				$button.addClass('inactive');
+			}
+		}
+		$button.parent().find('.quantity').val(newVal);
+		e.preventDefault();
+
+	});*/
+    /// price for shop
+      var totalCostText = $('#cart-subtotal-text');
+    var totalCostInput = $('#cart-subtotal-input');
+    var updateCart = function(totalCost) {
+        totalCostText.text("$" + totalCost);
+		totalCostInput.val(totalCost);
+        $(".checkout-button").data("price", totalCost * 100);
+    }
+	//------------------------------------------------------------------------------
+	$(".incr-btn").on("click", function(e) {
+		var $button = $(this);
+		var oldValue = $button.parent().find('.quantity').val();
+      //  var priceitem = parseFloat($('#item-price').val());
+        var priceitem = parseInt($button.parent('.count-input').find('.item-price').val());
+        var product = $button.parent('.count-input').find('.product').val();
+        //console.log("click");
+        console.log(priceitem);
+        console.log(product);
+        var plus =0;
+        $button.parent().find('.incr-btn[data-action="decrease"]').removeClass('inactive');
+		if ($button.data('action') == "increase") {
+			var newVal = parseFloat(oldValue) + 1;
+            plus =1; 
+		} else {
+		    // Don't allow decrementing below 1
+			if (oldValue > 0) {
+				var newVal = parseFloat(oldValue) - 1;
+                plus = -1;
+              
+			} else {
+				newVal = 0;
+				$button.addClass('inactive');
+                plus = 0;
+			}
+		}
+		$button.parent().find('.quantity').val(newVal);
+        localStorage.setItem(product, newVal);
+       
+       var totalstorage = localStorage.getItem("totalcost");
+        var totalcost= parseFloat(newVal * priceitem,2);
+       
+        if (totalstorage === null){
+            
+            localStorage.setItem("totalcost", parseInt(priceitem*plus));
+            var totalnouveau = parseInt(priceitem*plus) ;
+        }
+        else{
+           var  totalprecedent= parseInt(localStorage.getItem("totalcost"));
+            console.log(totalprecedent);
+            var totalnouveau = parseInt(priceitem*plus) + totalprecedent;
+            console.log(totalnouveau);
+            localStorage.setItem("totalcost", totalnouveau);
+        }
+       
+   
+        updateCart(totalnouveau);
 		e.preventDefault();
 
 /*        
