@@ -526,8 +526,8 @@ $(function() {
         $(".checkout-button").data("price", totalcost * 100);
          
         quantitemix= localStorage.getItem("mix");
-     console.log(quantitemix  && quantitemix!== "0");
-        if (quantitemix !== null){
+     console.log(quantitemix);
+        if (quantitemix !== null  && quantitemix !== "0"){
             quantitemix= parseInt(localStorage.getItem("mix"));
             $('#mix .incr-btn').parent().find('.quantity').val(quantitemix);
             $('#mix').show();
